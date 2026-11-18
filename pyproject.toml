@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shae-cobol-bank-account-manager"
+version = "0.1.0"
+description = "A COBOL-inspired terminal bank account manager using DATA DIVISION-style records, written in pure Python 3 standard library."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "spdedsec", email = "legendsatya7272@gmail.com" }]
+keywords = ["cobol", "bank", "cli", "python", "account-manager", "shae"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+dependencies = []
+
+[project.scripts]
+shae-bank = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/spdedsec/shae-cobol-bank-account-manager"
+Repository = "https://github.com/spdedsec/shae-cobol-bank-account-manager"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["main"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
